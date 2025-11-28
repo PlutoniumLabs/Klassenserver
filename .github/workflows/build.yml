@@ -16,7 +16,7 @@ jobs:
 
       - uses: dsaltares/fetch-gh-release-asset@master
         with:
-          repo: 'lumentae/provisioner'
+          repo: 'PlutoniumLabs/provisioner'
           file: 'Linux-Release.zip'
           
       - name: Extract provisioner
@@ -30,7 +30,7 @@ jobs:
       
       - name: Compile project
         run: |
-          cd klassenserver8 && ../provisioner/provisioner export && ../provisioner/provisioner export -t zip
+          cd klassenserver8 && ../provisioner/provisioner export && ../provisioner/provisioner export -t zip && ../provisioner/provisioner export -t curseforge
 
       - name: Create GitHub Release
         if: startsWith(github.event.head_commit.message, '[ignore]') == false
@@ -41,3 +41,4 @@ jobs:
           files: |
             klassenserver8/Klassenserver8.mrpack
             klassenserver8/Klassenserver8.zip
+            klassenserver8/Klassenserver8.curseforge.zip
