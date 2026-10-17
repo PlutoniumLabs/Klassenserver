@@ -38,7 +38,7 @@ jobs:
         with:
           tag_name: v${{ env.NOW }}
           name: Release v${{ env.NOW }}
-          body: "Klassenserver.mrpack für Modrinth, Klassenserver.zip für Curseforge"
+          body: "Klassenserver9.mrpack für Modrinth, Klassenserver9.zip für Curseforge"
           files: |
-            klassenserver8/Klassenserver.mrpack
-            klassenserver8/Klassenserver.zip
+            klassenserver9/Klassenserver9.mrpack
+            klassenserver9/Klassenserver9.zip
