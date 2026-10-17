@@ -30,7 +30,7 @@ jobs:
       
       - name: Compile project
         run: |
-          cd klassenserver8 && ../provisioner/provisioner export && ../provisioner/provisioner export -t curseforge
+          cd klassenserver9 && ../provisioner/provisioner export && ../provisioner/provisioner export -t curseforge
 
       - name: Create GitHub Release
         if: startsWith(github.event.head_commit.message, '[ignore]') == false
