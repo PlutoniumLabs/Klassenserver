@@ -1,0 +1,16 @@
+{
+    "allowedVersions": [],
+    "includes": [
+        "config",
+        "eula.txt",
+        "whitelist.json",
+        "servers.dat"
+    ],
+    "minecraft": {
+        "loaderVersion": "0.19.5",
+        "type": "fabric",
+        "version": "26.3"
+    },
+    "name": "Klassenserver9",
+    "version": "1.0.0"
+}
