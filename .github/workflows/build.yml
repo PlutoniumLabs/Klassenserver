@@ -30,7 +30,7 @@ jobs:
       
       - name: Compile project
         run: |
-          cd klassenserver8 && ../provisioner/provisioner export && ../provisioner/provisioner export -t zip && ../provisioner/provisioner export -t curseforge
+          cd klassenserver8 && ../provisioner/provisioner export && ../provisioner/provisioner export -t curseforge
 
       - name: Create GitHub Release
         if: startsWith(github.event.head_commit.message, '[ignore]') == false
@@ -38,7 +38,7 @@ jobs:
         with:
           tag_name: v${{ env.NOW }}
           name: Release v${{ env.NOW }}
+          body: "Klassenserver.mrpack für Modrinth, Klassenserver.zip für Curseforge"
           files: |
-            klassenserver8/Klassenserver8.mrpack
-            klassenserver8/Klassenserver8.zip
-            klassenserver8/Klassenserver8.curseforge.zip
+            klassenserver8/Klassenserver.mrpack
+            klassenserver8/Klassenserver.zip
